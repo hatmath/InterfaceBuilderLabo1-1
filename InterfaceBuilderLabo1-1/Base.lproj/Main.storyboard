@@ -21,6 +21,9 @@
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Hhm-oU-JQQ">
                                 <rect key="frame" x="88" y="241.33333333333334" width="720" height="30.666666666666657"/>
+                                <connections>
+                                    <action selector="sldUserGuess:" destination="BYZ-38-t0r" eventType="valueChanged" id="13b-xR-XJ7"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZh-2g-45O">
                                 <rect key="frame" x="90" y="199" width="16" height="29.333333333333343"/>
@@ -52,6 +55,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" backgroundImage="devinez_rouge"/>
+                                <connections>
+                                    <action selector="btnGuess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yao-2d-3cr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -77,6 +83,11 @@
                             <constraint firstItem="PQq-qH-M2L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xXi-Bf-D4L"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnGuess" destination="NxS-NK-DOZ" id="XKd-Fz-F6C"/>
+                        <outlet property="sldUserGuess" destination="Hhm-oU-JQQ" id="6PA-qj-BTI"/>
+                        <outlet property="txtOutput" destination="n6I-sx-V7o" id="zlP-Bs-ena"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
